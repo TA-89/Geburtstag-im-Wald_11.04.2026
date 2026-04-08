@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Herzliche Einladung zur Geburtstagsfeier am 11. April 2026 ab 12 Uhr" />
+  <!-- Robots: privat halten -->
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Geburtstagsfeier — 11. April 2026</title>
+
+  <!-- Google Fonts: Cormorant Garamond (Serif-Heading) + Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       HERO BEREICH
+       Bild austauschen: images/wald.jpg durch eigenes Bild ersetzen.
+       Alternativ: in style.css unter .hero { background-image: ... }
+       ================================================================ -->
+  <header class="hero" role="banner">
+    <div class="hero__overlay" aria-hidden="true"></div>
+    <div class="hero__content fade-in">
+      <!-- Text ändern: Datum im Eyebrow-Label -->
+      <span class="hero__eyebrow">11. April 2026</span>
+
+      <!-- Text ändern: Haupttitel Hero -->
+      <h1 class="hero__title">
+        Ein schöner<br />
+        <em>Nachmittag im Freien</em>
+      </h1>
+
+      <!-- Text ändern: Untertitel Hero -->
+      <p class="hero__subtitle">Du bist herzlich eingeladen</p>
+
+      <!-- Button scrollt zum Formular (Anker #anmeldung) -->
+      <a href="#anmeldung" class="btn btn--primary" id="hero-cta-btn">
+        Anmeldung
+      </a>
+    </div>
+
+    <!-- Kleiner Scrollpfeil -->
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ================================================================
+         EINLADUNGSTEXT
+         Texte in den <p>-Tags direkt anpassen
+         ================================================================ -->
+    <section class="section intro" aria-label="Einladung">
+      <div class="container container--narrow">
+        <!-- Text ändern: Einleitungssatz -->
+        <p class="intro__lead reveal">
+          Hey&nbsp;— am Samstag, <strong>11.&thinsp;April&nbsp;2026</strong>,
+          werde ich wieder ein Jahr älter.
+        </p>
+        <!-- Text ändern: Einladungssatz -->
+        <p class="intro__text reveal">
+          Wenn du Lust und Zeit hast, komm doch vorbei und feiere mit mir!
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         INFORMATIONSKARTEN
+         Jede Karte einzeln anpassen: Titel, Text, Links
+         ================================================================ -->
+    <section class="section info" aria-label="Veranstaltungsdetails">
+      <div class="container">
+        <div class="info__grid">
+
+          <!-- ---- Karte: Wann ---- -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2"/>
+                <line x1="16" y1="2" x2="16" y2="6"/>
+                <line x1="8"  y1="2" x2="8"  y2="6"/>
+                <line x1="3"  y1="10" x2="21" y2="10"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Wann</h2>
+            <!-- Text ändern: Datum und Uhrzeit -->
+            <p class="card__body">
+              Samstag, 11. April 2026<br />
+              Ab 12:00 bis 20:00 Uhr
+            </p>
+          </article>
+
+          <!-- ---- Karte: Wo ---- -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Wo</h2>
+            <!-- Link ändern: Google Maps URL für den Veranstaltungsort -->
+            <a
+              href="https://maps.app.goo.gl/LRioycBemN4ist2S7"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card__link"
+              aria-label="Veranstaltungsort auf Google Maps öffnen"
+            >
+              Auf Karte öffnen
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                   class="card__link-arrow" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75
+                  0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                  clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- ---- Karte: Parkplatz ---- -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13" rx="2"/>
+                <path d="M16 8h4l3 3v5h-7V8z"/>
+                <circle cx="5.5"  cy="18.5" r="2.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Parkplatz</h2>
+            <!-- Link ändern: Google Maps URL für den Parkplatz -->
+            <a
+              href="https://maps.app.goo.gl/zf64Q7uXqoiXSosY8"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="card__link"
+              aria-label="Parkplatz auf Google Maps öffnen"
+            >
+              Zum Parkplatz
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                   class="card__link-arrow" aria-hidden="true">
+                <path fill-rule="evenodd"
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75
+                  0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                  clip-rule="evenodd"/>
+              </svg>
+            </a>
+          </article>
+
+          <!-- ---- Karte: Mitnehmen ---- -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+                <line x1="3" y1="6" x2="21" y2="6"/>
+                <path d="M16 10a4 4 0 01-8 0"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Mitnehmen</h2>
+            <!-- Text ändern: Was mitgebracht werden soll -->
+            <p class="card__body">
+              Gar nichts — sofern du nicht vegetarisch oder vegan unterwegs bist.
+              Sonst bitte etwas für den Grill mitbringen.
+            </p>
+          </article>
+
+          <!-- ---- Karte: Verpflegung (hervorgehoben) ---- -->
+          <article class="card card--accent reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 8h1a4 4 0 010 8h-1"/>
+                <path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/>
+                <line x1="6"  y1="1" x2="6"  y2="4"/>
+                <line x1="10" y1="1" x2="10" y2="4"/>
+                <line x1="14" y1="1" x2="14" y2="4"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Verpflegung</h2>
+            <!-- Text ändern: Was es zu essen und trinken gibt -->
+            <p class="card__body">
+              Würste, Brot, Bier,<br />Weisswein und alkoholfreie Getränke
+            </p>
+          </article>
+
+          <!-- ---- Karte: Kinder ---- -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                   stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78
+                7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+              </svg>
+            </div>
+            <h2 class="card__title">Kinder</h2>
+            <!-- Text ändern: Kinderhinweis -->
+            <p class="card__body">
+              Dürfen gerne mitkommen!
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         BILDBEREICH
+         Bilder austauschen: src-Attribut der <img>-Tags anpassen.
+         Alle Bilder liegen im Ordner /images/
+         - images/bier.webp       → Bier-Bild (transparent OK)
+         - images/bratwurst.webp  → Bratwurst-Bild
+         ================================================================ -->
+    <section class="section gallery" aria-label="Impressionen">
+      <div class="container">
+        <div class="gallery__grid">
+
+          <!-- Bier-Bild: transparenter Hintergrund, warm unterlegt -->
+          <div class="gallery__item gallery__item--beer reveal">
+            <img
+              src="images/bier.webp"
+              alt="Kaltes Bier — Prost!"
+              class="gallery__img"
+              loading="lazy"
+              width="400"
+              height="400"
+            />
+          </div>
+
+          <!-- Bratwurst-Bild -->
+          <div class="gallery__item gallery__item--bratwurst reveal">
+            <img
+              src="images/bratwurst.webp"
+              alt="Bratwurst frisch vom Grill"
+              class="gallery__img"
+              loading="lazy"
+              width="400"
+              height="400"
+            />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         ANMELDEBEREICH
+         WhatsApp-Nummer ändern: in script.js, Variable WHATSAPP_NUMBER
+         Formular-Labels und Texte hier direkt anpassen
+         ================================================================ -->
+    <section class="section register" id="anmeldung" aria-label="Anmeldung">
+      <div class="container container--narrow">
+
+        <!-- Text ändern: Formular-Titel und Untertitel -->
+        <h2 class="section__title reveal">Anmeldung</h2>
+        <p class="section__subtitle reveal">
+          Melde dich kurz an — direkt und unkompliziert per WhatsApp.
+        </p>
+
+        <form class="form reveal" id="rsvp-form" novalidate>
+
+          <!-- Feld: Name (Pflichtfeld) -->
+          <div class="form__group">
+            <label for="field-name" class="form__label">
+              Name&thinsp;/&thinsp;Namen
+              <span class="form__required" aria-hidden="true">*</span>
+            </label>
+            <input
+              type="text"
+              id="field-name"
+              name="name"
+              class="form__input"
+              placeholder="Dein Name oder eure Namen"
+              autocomplete="name"
+              required
+              aria-required="true"
+              aria-describedby="error-name"
+            />
+            <span class="form__error" id="error-name" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Felder: Anzahl Personen + Anzahl Würste (nebeneinander) -->
+          <div class="form__row">
+            <div class="form__group">
+              <label for="field-personen" class="form__label">Anzahl Personen</label>
+              <select id="field-personen" name="personen" class="form__select">
+                <option value="1">1 Person</option>
+                <option value="2">2 Personen</option>
+                <option value="3">3 Personen</option>
+                <option value="4">4 Personen</option>
+                <option value="5">5 Personen</option>
+                <option value="6">6 Personen</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="field-wuerste" class="form__label">Anzahl Würste</label>
+              <select id="field-wuerste" name="wuerste" class="form__select">
+                <option value="1">1 Wurst</option>
+                <option value="2">2 Würste</option>
+                <option value="3">3 Würste</option>
+                <option value="4">4 Würste</option>
+                <option value="5">5 Würste</option>
+                <option value="6">6 Würste</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Feld: Sonstiges (optional) -->
+          <div class="form__group">
+            <label for="field-sonstiges" class="form__label">Sonstiges</label>
+            <textarea
+              id="field-sonstiges"
+              name="sonstiges"
+              class="form__textarea"
+              rows="3"
+              placeholder="Allergien, Fragen, Anmerkungen …"
+            ></textarea>
+          </div>
+
+          <!-- Absende-Button -->
+          <button type="submit" class="btn btn--primary btn--block">
+            <!-- WhatsApp Icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                 class="btn__icon" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15
+                -.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39
+                -1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298
+                -.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669
+                -1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0
+                -.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074
+                .149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195
+                1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074
+                -.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.858L.057 23.215a.75
+                .75 0 00.919.93l5.556-1.461A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627
+                0 12 0zm0 22c-1.886 0-3.65-.498-5.177-1.37l-.361-.213-3.754.987.998-3.645-.234
+                -.374A9.953 9.953 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/>
+            </svg>
+            Jetzt per WhatsApp anmelden
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+
+    <!-- ================================================================
+         ABSCHLUSSBEREICH
+         Text ändern: Abschlusstext und Kleidungshinweis
+         ================================================================ -->
+    <section class="section closing" aria-label="Abschluss">
+      <div class="container container--narrow">
+        <div class="closing__inner reveal">
+
+          <!-- Text ändern: Abschlusstext -->
+          <p class="closing__title">
+            Ich freue mich sehr auf einen lustigen Nachmittag mit euch.
+          </p>
+
+          <!-- Text ändern: Kleidungshinweis -->
+          <p class="closing__note">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                 class="closing__note-icon" aria-hidden="true">
+              <polyline points="20 12 20 22 4 22 4 12"/>
+              <rect x="2" y="7" width="20" height="5"/>
+              <path d="M12 22V7"/>
+              <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
+              <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+            </svg>
+            Bitte zieht warme Jacken und Waldkleider an.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <p class="footer__text">Privat &mdash; 2026</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
