@@ -254,8 +254,8 @@ strong {
    ---------------------------------------------------------------- */
 .hero {
   position: relative;
-  min-height: 100vh;
-  min-height: 100svh;    /* Berücksichtigt Mobile-Browser-Chrome */
+  min-height: 88vh;
+  min-height: 88svh;    /* Bewusst < 100% — nächster Abschnitt lugt hervor */
 
   /* !! Hintergrundbild ändern: URL anpassen !! */
   background-image: url('images/wald.jpg');
