@@ -37,7 +37,7 @@
       </h1>
 
       <!-- Text ändern: Untertitel Hero -->
-      <p class="hero__subtitle">Tobias Arnold</p>
+      <p class="hero__subtitle">Ein Nachmittag im Freien</p>
 
       <!-- Button scrollt zum Formular (Anker #anmeldung) -->
       <a href="#anmeldung" class="btn btn--primary" id="hero-cta-btn">
@@ -211,7 +211,7 @@
             <h2 class="card__title">Kinder</h2>
             <!-- Text ändern: Kinderhinweis -->
             <p class="card__body">
-              Dürfen gerne mitkommen! (euri Partner*inne notürli au :)
+              Dürfen gerne mitkommen!
             </p>
           </article>
 
@@ -271,7 +271,7 @@
         <!-- Text ändern: Formular-Titel und Untertitel -->
         <h2 class="section__title reveal">Anmeldung</h2>
         <p class="section__subtitle reveal">
-          Meld di doch gad do churz ah.
+          Melde dich kurz an — direkt und unkompliziert per WhatsApp.
         </p>
 
         <form class="form reveal" id="rsvp-form" novalidate>
@@ -386,7 +386,7 @@
               <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
               <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
             </svg>
-            Bitte leget warmi Jacke ah und nehmet Waldchleider mit, Gschenkli bruchi imfall au kei😚.
+            Bitte leget warmi Jacke ah und nehmet Waldchleider mit.
           </p>
 
         </div>
@@ -402,6 +402,128 @@
       <p class="footer__text">Privat &mdash; 2026</p>
     </div>
   </footer>
+
+  <!-- ================================================================
+       BESTÄTIGUNGS-MODAL
+       Erscheint nach dem Absenden des Formulars.
+       Texte und Links hier anpassen.
+       ================================================================ -->
+  <div class="modal-backdrop" id="confirm-modal" role="dialog" aria-modal="true"
+       aria-labelledby="modal-title" hidden>
+    <div class="modal">
+
+      <!-- Schliessen-Button -->
+      <button class="modal__close" id="modal-close-btn" aria-label="Schliessen">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <!-- Häkchen-Icon -->
+      <div class="modal__icon" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+          <polyline points="22 4 12 14.01 9 11.01"/>
+        </svg>
+      </div>
+
+      <!-- Titel -->
+      <h2 class="modal__title" id="modal-title">Danke für dini Anmeldung! 🎉</h2>
+      <p class="modal__lead">Mir freue üs auf di. Hie nochmal alli Infos:</p>
+
+      <!-- Infokarten im Modal -->
+      <ul class="modal__info-list">
+
+        <!-- Wann -->
+        <li class="modal__info-item">
+          <div class="modal__info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8"  y1="2" x2="8"  y2="6"/>
+              <line x1="3"  y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <!-- Text ändern: Datum und Uhrzeit -->
+            <span class="modal__info-label">Wann</span>
+            <span class="modal__info-value">Samstag, 11. April 2026 — ab 12:00 bis 20:00 Uhr</span>
+          </div>
+        </li>
+
+        <!-- Wo -->
+        <li class="modal__info-item">
+          <div class="modal__info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <span class="modal__info-label">Wo</span>
+            <!-- Link ändern: Google Maps URL Veranstaltungsort -->
+            <a href="https://maps.app.goo.gl/LRioycBemN4ist2S7" target="_blank"
+               rel="noopener noreferrer" class="modal__info-link">
+              Wegbeschreibung öffnen →
+            </a>
+          </div>
+        </li>
+
+        <!-- Parkplatz -->
+        <li class="modal__info-item">
+          <div class="modal__info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2"/>
+              <path d="M16 8h4l3 3v5h-7V8z"/>
+              <circle cx="5.5"  cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <span class="modal__info-label">Parkplatz</span>
+            <!-- Link ändern: Google Maps URL Parkplatz -->
+            <a href="https://maps.app.goo.gl/zf64Q7uXqoiXSosY8" target="_blank"
+               rel="noopener noreferrer" class="modal__info-link">
+              Zum Parkplatz →
+            </a>
+          </div>
+        </li>
+
+        <!-- Kleidung -->
+        <li class="modal__info-item">
+          <div class="modal__info-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 12 20 22 4 22 4 12"/>
+              <rect x="2" y="7" width="20" height="5"/>
+              <path d="M12 22V7"/>
+              <path d="M12 7H7.5a2.5 2.5 0 010-5C11 2 12 7 12 7z"/>
+              <path d="M12 7h4.5a2.5 2.5 0 000-5C13 2 12 7 12 7z"/>
+            </svg>
+          </div>
+          <div>
+            <span class="modal__info-label">Kleidung</span>
+            <!-- Text ändern: Kleidungshinweis -->
+            <span class="modal__info-value">Warmi Jacke ah und Waldchleider mitneh!</span>
+          </div>
+        </li>
+
+      </ul>
+
+      <!-- Schlusstext -->
+      <!-- Text ändern: Abschlusssatz im Modal -->
+      <p class="modal__footer-text">Mir freue üs sehr uf di! 🌲</p>
+
+      <button class="btn btn--primary" id="modal-ok-btn">Alles klar, bis bald!</button>
+
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

@@ -36,6 +36,9 @@ let fieldWuerste;
 let fieldSonstiges;
 let errorName;
 let heroCta;
+let confirmModal;
+let modalCloseBtn;
+let modalOkBtn;
 
 
 /* ================================================================
@@ -200,8 +203,57 @@ function openWhatsApp(message) {
 
 
 /* ================================================================
-   6. FORMULAR SUBMIT
-   Validiert das Formular und öffnet bei Erfolg WhatsApp.
+   6. BESTÄTIGUNGS-MODAL
+   Öffnet und schliesst das Overlay nach der Anmeldung.
+   ================================================================ */
+function openConfirmModal() {
+  if (!confirmModal) return;
+  confirmModal.hidden = false;
+  document.body.style.overflow = 'hidden'; // Hintergrund fixieren
+  // Fokus auf OK-Button setzen (Accessibility)
+  setTimeout(function () {
+    if (modalOkBtn) modalOkBtn.focus();
+  }, 100);
+}
+
+function closeConfirmModal() {
+  if (!confirmModal) return;
+  confirmModal.hidden = true;
+  document.body.style.overflow = '';
+}
+
+function initModal() {
+  if (!confirmModal) return;
+
+  // Schliessen per X-Button
+  if (modalCloseBtn) {
+    modalCloseBtn.addEventListener('click', closeConfirmModal);
+  }
+
+  // Schliessen per OK-Button
+  if (modalOkBtn) {
+    modalOkBtn.addEventListener('click', closeConfirmModal);
+  }
+
+  // Schliessen per Klick auf den Hintergrund
+  confirmModal.addEventListener('click', function (e) {
+    if (e.target === confirmModal) {
+      closeConfirmModal();
+    }
+  });
+
+  // Schliessen per Escape-Taste
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !confirmModal.hidden) {
+      closeConfirmModal();
+    }
+  });
+}
+
+
+/* ================================================================
+   7. FORMULAR SUBMIT
+   Validiert das Formular, öffnet WhatsApp und zeigt das Modal.
    ================================================================ */
 function initFormSubmit() {
   if (!form) return;
@@ -222,12 +274,15 @@ function initFormSubmit() {
     // WhatsApp-Nachricht erzeugen und öffnen
     const message = buildWhatsAppMessage();
     openWhatsApp(message);
+
+    // Bestätigungs-Modal anzeigen
+    openConfirmModal();
   });
 }
 
 
 /* ================================================================
-   7. INITIALISIERUNG
+   8. INITIALISIERUNG
    Alle Funktionen nach vollständigem DOM-Load starten.
    ================================================================ */
 document.addEventListener('DOMContentLoaded', function () {
@@ -240,11 +295,15 @@ document.addEventListener('DOMContentLoaded', function () {
   fieldSonstiges = document.getElementById('field-sonstiges');
   errorName      = document.getElementById('error-name');
   heroCta        = document.getElementById('hero-cta-btn');
+  confirmModal   = document.getElementById('confirm-modal');
+  modalCloseBtn  = document.getElementById('modal-close-btn');
+  modalOkBtn     = document.getElementById('modal-ok-btn');
 
   // Module initialisieren
   initReveal();
   initHeroCta();
   initLiveValidation();
   initFormSubmit();
+  initModal();
 
 });
